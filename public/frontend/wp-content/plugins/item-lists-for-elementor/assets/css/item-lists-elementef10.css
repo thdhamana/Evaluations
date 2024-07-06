@@ -1,0 +1,214 @@
+/* Start Common CSS */
+h2.ile-title {
+    font-size: 22px;
+    margin-bottom: 0px;
+}
+p.ile-content {
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+/* End Common CSS */
+
+/* Start Material Bullet Style CSS */
+.ile-material-bullet-style .ile-container-row {
+    display: flex;
+    overflow: hidden;
+}
+.ile-material-bullet-style .ile-container-row:last-child {
+    margin-bottom: 0px !important;
+}
+.ile-material-bullet-style .ile-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ile-material-bullet-style .ile-image {
+    width: 100px;
+}
+.ile-material-bullet-style .ile-content-box {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+/* End Material Bullet Style CSS */
+
+/* Start Shape Bullet Style CSS */
+.ile-shape-bullet-style .ile-container-holder {
+    display: flex;
+}
+.ile-shape-bullet-style .ile-container-icon-line {
+    display: flex;
+    flex-direction: column;    
+}
+.ile-shape-bullet-style .ile-icon-box {
+    flex-shrink: 0;
+    flex-grow: 0;
+    position: relative;
+}
+.ile-shape-bullet-style .ile-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.ile-shape-bullet-style .ile-line {
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+.ile-container-holder:last-child .ile-line {
+    display: none;
+}
+.ile-shape-bullet-style .ile-content-box {
+    padding: 10px 20px;
+}
+.ile-shape-bullet-style .ile-container-holder:last-child .ile-content-box {
+    margin-bottom: 0px !important;
+}
+/* End Shape Bullet Style CSS */
+
+/* Start Timeline Bullet Style CSS */
+.ile-timeline-bullet-style .ile-container-holder {
+    display: flex;
+    position: relative;
+}
+.ile-timeline-bullet-style .ile-timeline-vertical {
+    height: 100%;
+    position: absolute;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.ile-timeline-bullet-style .ile-timeline-horizontal {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.ile-timeline-bullet-style .ile-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.ile-timeline-bullet-style .ile-image {
+    width: 60px;
+}
+.ile-timeline-bullet-style .ile-content-box {
+    padding: 10px 20px 10px 20px;
+}
+.ile-timeline-bullet-style .ile-container-holder:last-child {
+    padding-bottom: 0px !important;
+}
+/* End Timeline Bullet Style CSS */
+
+/* Start Alternate Timeline Bullet Style CSS */
+.ile-alternate-timeline-bullet-style .ile-container-holder {
+    display: flex;
+    position: relative;
+    width: 50%;
+    clear: both;
+}
+.ile-alternate-timeline-bullet-style .ile-timeline-left {
+    direction: rtl;
+}
+.ile-alternate-timeline-bullet-style .ile-timeline-right {
+    float: right;
+}
+.ile-alternate-timeline-bullet-style .ile-timeline-vertical {
+    height: 100%;
+    position: absolute;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.ile-alternate-timeline-bullet-style .ile-timeline-horizontal {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.ile-alternate-timeline-bullet-style .ile-image {
+    width: 60px;
+}
+.ile-alternate-timeline-bullet-style .ile-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.ile-alternate-timeline-bullet-style .ile-content-box {
+    padding: 0px 20px;
+}
+.ile-alternate-timeline-bullet-style .ile-container-holder:last-child {
+    padding-bottom: 0px !important;
+}
+/* End Alternate Timeline Bullet Style CSS */
+
+/* Start Gradient Ordered Bullet Style CSS */
+.ile-gradient-ordered-bullet-style ol.ile-container-holder {
+    list-style: none;
+    margin: 0px;
+    counter-reset: gradient-counter;
+}
+.ile-gradient-ordered-bullet-style li.ile-content-container {
+    counter-increment: gradient-counter;
+    position: relative;
+}
+.ile-gradient-ordered-bullet-style li.ile-content-container::before {
+    background-color: #FF8181;
+    content: "";
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    font-size: 32px;
+    font-weight: 900;
+    color: #1d1f20;
+    content: counter(gradient-counter);
+    display: flex;
+    border-radius: 20px 20px 0 20px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.ile-gradient-ordered-bullet-style li.ile-number-alignment-top {
+    padding-top: 0.1px;
+}
+.ile-gradient-ordered-bullet-style li.ile-number-alignment-top::before {
+    top: 0px;
+}
+.ile-gradient-ordered-bullet-style li.ile-number-alignment-middle::before {
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+.ile-gradient-ordered-bullet-style li.ile-number-alignment-top {
+    padding-bottom: 0.1px;
+}
+.ile-gradient-ordered-bullet-style li.ile-number-alignment-bottom::before {
+    bottom: 0px;
+}
+.ile-gradient-ordered-bullet-style .ile-content-box {
+    border-radius: 10px;
+    padding: 20px 0px 20px 60px;
+    margin: 20px 0px 20px 20px;
+}
+.ile-gradient-ordered-bullet-style .ile-content-container:last-child .ile-content-box {
+    margin-bottom: 0px !important;
+}
+/* End Gradient Ordered Bullet Style CSS */
+
+/* Responsive Design */
+@media (max-width: 767px)  {
+    .ile-alternate-timeline-bullet-style .ile-container-holder {
+        width: 100%;
+    }
+    .ile-alternate-timeline-bullet-style .ile-timeline-left {
+        direction: ltr;
+        margin-left: 0px !important;
+    }
+    .ile-alternate-timeline-bullet-style .ile-timeline-right {
+        float: none;
+        margin-right: 0px !important;
+    }
+}
