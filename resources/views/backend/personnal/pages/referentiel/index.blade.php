@@ -56,8 +56,8 @@
                                         <i class="fa fa-arrow-down-long "></i>
                                     </span>
                                 </th>
-                                <th>Visionner</th>  
-                                <th>Documents</th>  
+                                <th>Visionner le document</th>  
+                                <th>Télécharger le document</th>  
                             </tr>
                         </thead>
                         <tbody id="tableBody">
@@ -66,7 +66,10 @@
                                     <td class="p-1 text-center">{{$k+1}} </td>
                                     <td class="p-1">{{$referentiel->nom}} </td>
                                     <td title="Voir le contenu de la reference" class="px-5">
-                                        <a class="fs-4 me-2" href="{{ Storage::url('public/referentiels/' . $referentiel->pdf) }}" target="_blank"><i class="fa fa-eye btn-color-primary"></i></a>
+                                        <a class="fs-4 me-2" href="{{ Storage::url('public/referentiels/' . $referentiel->pdf) }}" target="_blank">
+                                            <i class="fa fa-eye btn-color-primary ms-2"></i>
+                                            Visionner le contnu
+                                        </a>
                                     </td>
                                     <td>
                                         <a href="{{ route('referentiel.download', $referentiel) }}" class="text-center fs-4 d-flex justify-content-center "><i class="fa-solid fa-download"></i></a>

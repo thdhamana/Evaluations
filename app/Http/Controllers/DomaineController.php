@@ -14,7 +14,7 @@ class DomaineController extends Controller
     public function index()
     {
         return view("backend.admin.pages.domaine.index" , [
-            "domaines"=> Domaine::orderBy("created_at","asc")->paginate(2)
+            "domaines"=> Domaine::orderBy("created_at","desc")->paginate(25)
         ]);
     }
 

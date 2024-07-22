@@ -56,7 +56,11 @@ body {
 .btn-close{
    font-size: 2em;
    color: white !important;
- }
+}
+
+.modalText {
+   font-size: 15px;
+}
 
 
 body::-webkit-scrollbar {

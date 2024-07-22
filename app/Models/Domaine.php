@@ -17,4 +17,9 @@ class Domaine extends Model
     {
         return $this->hasMany(Stand::class);
     }
+
+    public function evaluers()
+    {
+        return $this->hasMany(Evaluer::class);
+    }
 }

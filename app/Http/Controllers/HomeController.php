@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Domaine;
 use App\Models\Referentiel;
+use App\Models\Stand;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -26,7 +27,6 @@ class HomeController extends Controller
     }
 
     // pour les views du personnel
-    // methode pour les referentiels
     public function referentiel()
     {
         return view("backend/personnal/pages/referentiel/index" ,[
@@ -37,9 +37,17 @@ class HomeController extends Controller
     public function domaine()
     {
         return view("backend/personnal/pages/domaine/index" ,[
-            "domaines"=> Domaine::orderBy("created_at","desc")->paginate(2)
+            "domaines"=> Domaine::orderBy("created_at","desc")->paginate(25)
         ]);
     }
 
+    public function standard(Domaine $domaine) {
+        $standards = Stand::whereIn('domaine_id', $domaine)->get();
+        return view('backend/personnal/pages/domaine/standardIndex', [
+            'standards' => $standards
+        ]);
+    }
+
+    
 
 }

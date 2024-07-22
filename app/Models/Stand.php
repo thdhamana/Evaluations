@@ -19,5 +19,10 @@ class Stand extends Model
     {
         return $this->belongsTo(Domaine::class);
     }
+
+    public function evaluers()
+    {
+        return $this->hasMany(Evaluer::class);
+    }
     
 }

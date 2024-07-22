@@ -27,9 +27,9 @@
       </li><!-- End Contact Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed d-flex gap-2" href="{{route('personnal.stand.index')}}">
+        <a class="nav-link collapsed d-flex gap-2" href="{{route('personnal.evaluer.index')}}">
           <i class="fa fa-book"></i>
-            <span>Standards</span>
+          <span>Se faire evaluer</span>
         </a>
       </li><!-- End Register Page Nav -->
 

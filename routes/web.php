@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DomaineController;
+use App\Http\Controllers\EvaluerController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReferentielController;
@@ -46,6 +47,12 @@ Route::name('personnal.')->group(function () {
     Route::get('personnal/referentiel', [HomeController::class,'referentiel'])->name('referentiel');
     Route::get('personnal/domaine', [HomeController::class,'domaine'])->name('domaine');
     Route::resource('stand', StandardController::class)->except('show');
+
+    // 
+    Route::resource('evaluer', EvaluerController::class)->except('show');
+    Route::get('/evaluer/{evaluer}/edits', [EvaluerController::class, 'edits'])->name('evaluer.edits');
+    Route::get('/standard/{domaine}/getStandards', [EvaluerController::class, 'getStandards'])->name('getStandards');
+    Route::get('/standard/{domaine}/standard', [HomeController::class, 'standard'])->name('standard');
 });
 
 // breeze
